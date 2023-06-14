@@ -7,10 +7,13 @@
  * log both to see properties
  * invoke each method from both instances (two)
  */
-//methods: purr, giveAMouse
+//methods: purr, giveAMouse, meow
 //properties: breed, color, age, name
 
 class Cat{
+    deservesATreat = false;
+    lovesCatGrass = true;
+    hatesWater = true;
     constructor(name, breed, color, age){
         this.name = name;
         this.breed = breed;
@@ -25,7 +28,11 @@ class Cat{
 
     giveAMouse(){
         this.mouseCount+=1;
-        console.log(`${this.name} has given you a gift of a mouse on your doorstep.  You have a total of ${this.mouseCount} mice`)
+        console.log(`${this.name} has given you a gift of a mouse on your doorstep.  You have a total of ${this.mouseCount} mice.`)
+    }
+
+    meow(){
+        console.log("Meoooow!");
     }
 
 
@@ -36,6 +43,7 @@ console.log(cat_0);
 
 cat_0.purr();
 cat_0.giveAMouse();
+cat_0.meow();
 console.log("***********************************************\n")
 
 const cat_1 = new Cat("Benny", "Ragdoll", "white grey and brown", 0.5);
@@ -43,6 +51,7 @@ console.log(cat_1);
 
 cat_1.purr();
 cat_1.giveAMouse();
+cat_1.meow();
 
 console.log("***********************************************\n")
 
@@ -84,6 +93,10 @@ class Pirate{
 
         }
     };
+
+    pillage(){
+        console.log("Pillaging brings me the greatest glee!!!!");
+    }
 }
 
 //function with for loop to loop through each of the boat array provided and print their properties and methods
@@ -92,6 +105,7 @@ function piratePropertiesOnBoard (boat){
         console.log(`${pirate.title} ${pirate.name}- eyepatch is: ${pirate.eyePatch} and peg leg is: ${pirate.pegLeg}`);
         pirate.shipWreck();
         pirate.swabTheDeck();
+        pirate.pillage();
         console.log("*********************************************************")
     }
 }

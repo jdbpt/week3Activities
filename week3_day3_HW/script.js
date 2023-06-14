@@ -50,6 +50,7 @@ class Person{
 
     }
 
+    //methods
     breathe(){
         console.log("\*Breathe\*");
     }
@@ -80,7 +81,7 @@ class PostalWorker extends Person{
         console.log("Mail has been sorted!");
     }
 
-    //truck is packed is ready to begin the day of delivery of mail
+    //truck is packed set to true and is ready to begin the day of delivery of mail
     packTruck(){
         this.truckPacked = true;
         console.log("Truck has been packed and is ready to drive!");
@@ -93,7 +94,7 @@ class PostalWorker extends Person{
         console.log(`Mail has been delievered to: ${houseAddress}`);
 
     }
-    //end of shirt, reset the properties for the day
+    //end of shift, reset the properties for the day
     endShift(){
         this.mailSorted = false;
         this.truckPacked = false;
@@ -166,7 +167,7 @@ console.log("****************************************************");
 class Chef extends Person{
     profession = "Chef";
     //methods
-    //buyFood: provided an array, prints off the list, separated by a comma and a space
+    //buyFood: provided an array, prints off the list separated by a comma and a space
     buyFood(foodToBuy){
        console.log(`Make sure to buy\-\n\t Shopping List: ${foodToBuy.join(", ")}`)
 
